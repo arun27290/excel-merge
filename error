@@ -1,0 +1,77 @@
+getting this error while running ----Traceback (most recent call last):
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/flask/[app.py](http://app.py)", line 1511, in wsgi_app
+
+    response = self.full_dispatch_request()
+
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/flask/[app.py](http://app.py)", line 919, in full_dispatch_request
+
+    rv = self.handle_user_exception(e)
+
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/flask_cors/[extension.py](http://extension.py)", line 176, in wrapped_function
+
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+
+                                                ^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/flask/[app.py](http://app.py)", line 917, in full_dispatch_request
+
+    rv = self.dispatch_request()
+
+         ^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/flask/[app.py](http://app.py)", line 902, in dispatch_request
+
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/excel_merge/app_[merge.py](http://merge.py)", line 188, in index
+
+    return render_template("index.html")
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/flask/[templating.py](http://templating.py)", line 150, in render_template
+
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/jinja2/[environment.py](http://environment.py)", line 1087, in get_or_select_template
+
+    return self.get_template(template_name_or_list, parent, globals)
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/jinja2/[environment.py](http://environment.py)", line 1016, in get_template
+
+    return self._load_template(name, globals)
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/jinja2/[environment.py](http://environment.py)", line 975, in _load_template
+
+    template = self.loader.load(self, name, self.make_globals(globals))
+
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/jinja2/[loaders.py](http://loaders.py)", line 126, in load
+
+    source, filename, uptodate = self.get_source(environment, name)
+
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/flask/[templating.py](http://templating.py)", line 66, in get_source
+
+    return self._get_source_fast(environment, template)
+
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/arun/apps/test-py/.venv/lib/python3.12/site-packages/flask/[templating.py](http://templating.py)", line 100, in _get_source_fast
+
+    raise TemplateNotFound(template)
